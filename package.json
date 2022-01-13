@@ -1,0 +1,38 @@
+{
+  "name": "backend",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "start:dev": "nodemon ./bin/www",
+    "debug": "ndb ./bin/www"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "axios": "^0.24.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^10.0.0",
+    "express": "~4.16.1",
+    "express-fileupload": "^1.2.1",
+    "helmet": "^5.0.1",
+    "hpp": "^0.2.3",
+    "ipfs": "^0.61.0",
+    "ipfs-http-client": "^55.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "minimist": "^1.2.5",
+    "mongoose": "^6.1.4",
+    "morgan": "~1.9.1",
+    "pug": "^3.0.2",
+    "util": "^0.12.4",
+    "web3": "1.5.1",
+    "web3.storage": "^3.5.2",
+    "xss-clean": "^0.1.1"
+  },
+  "devDependencies": {
+    "jest": "^27.4.5",
+    "nodemon": "^2.0.15"
+  }
+}
