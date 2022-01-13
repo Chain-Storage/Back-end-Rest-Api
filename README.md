@@ -6,7 +6,7 @@ Chain Storage is decentralize storage application provices you to storage files 
 
 How to set up api
 
-### Requarments
+### Requirements
 
 1. MongoDb
 2. Ganache
