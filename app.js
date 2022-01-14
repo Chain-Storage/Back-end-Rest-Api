@@ -17,6 +17,12 @@ app.use(upload());
 app.use(cookieParser());
 app.use(express.json());
 dotenv.config();
+app.use(
+  cors({
+    origin: `http://localhost:3000`, //react's address
+    credentials: true,
+  })
+);
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));

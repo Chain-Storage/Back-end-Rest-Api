@@ -33,32 +33,32 @@ exports.sendFile = catchAsync(async (req, res, next) => {
         },
       });
     }
+  }
 
-    const fileSize = file.size / 1000000;
-    const totalStorageWithNewFile = +req.user.totalStorage + fileSize;
+  const fileSize = file.size / 1000000;
+  const totalStorageWithNewFile = +req.user.totalStorage + fileSize;
 
-    if (req.user.role === "standart" && totalStorageWithNewFile < 1000) {
-      sendFile();
-      console.log("Standart User");
-    } else if (req.user.role === "gold" && totalStorageWithNewFile < 50000) {
-      sendFile();
-      console.log("Golad User");
-    } else if (
-      req.user.role === "preminum" &&
-      totalStorageWithNewFile < 1000000
-    ) {
-      sendFile();
-      console.log("Perminum User");
-    } else {
-      console.log("File not Sended");
-      res.status(201).json({
-        status: "error",
-        data: {
-          message:
-            "You can't upload this file because ypu don't have enoguh space",
-        },
-      });
-    }
+  if (req.user.role === "standart" && totalStorageWithNewFile < 1000) {
+    sendFile();
+    console.log("Standart User");
+  } else if (req.user.role === "gold" && totalStorageWithNewFile < 50000) {
+    sendFile();
+    console.log("Golad User");
+  } else if (
+    req.user.role === "preminum" &&
+    totalStorageWithNewFile < 1000000
+  ) {
+    sendFile();
+    console.log("Perminum User");
+  } else {
+    console.log("File not Sended");
+    res.status(201).json({
+      status: "error",
+      data: {
+        message:
+          "You can't upload this file because ypu don't have enoguh space",
+      },
+    });
   }
 });
 
